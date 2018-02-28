@@ -1,0 +1,18 @@
+{
+  "author": "Binh Quan <binhqd@gmail.com>",
+  "name": "str_shorten",
+  "main": "index.js",
+  "description": "Shorten string by character length with word boundary supported",
+  "version": "0.1",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:binhqd/str_shorten.git"
+  },
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^5.0.1"
+  }
+}
