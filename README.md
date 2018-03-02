@@ -10,7 +10,18 @@ npm install --save str_shorten
 ```
 
 ## Usage
+```
+str_shorten(string, maxChars, options) 
+```
 
+### Options
+
+| name         | default | required | type   | description                                                                                                                |
+|--------------|----------|--------|----------|-----------------------------------------------------------------------------------------------------------------|
+| wordBoundary | true | false     | boolean  | Indicate whether using word boundary or not. |
+| endSymbols | '...' | false     | string  | Symbols indicate there is more text. |
+
+## Example
 ```javascript
 var strShorten = require("str_shorten")
 var str = "We will win if we want";
