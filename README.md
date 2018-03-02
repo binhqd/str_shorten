@@ -14,4 +14,5 @@ The return value will be "We will win"
 
 ## License
 Copyright (c) 2018 Binh Quan
+
 Licensed under the MIT license.
