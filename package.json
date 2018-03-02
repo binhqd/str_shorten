@@ -4,7 +4,7 @@
   "main": "index.js",
   "description": "Shorten string by character length with word boundary supported",
   "version": "0.1.2",
-  "keywords": "string shorten",
+  "keywords": ["str_shorten", "truncate", "shorten", "string"],
   "repository": {
     "type": "git",
     "url": "git@github.com:binhqd/str_shorten.git"
