@@ -12,6 +12,8 @@ var shortenStr = str_shorten(str, 11);
 
 The return value will be "We will win"
 
+[See Demo](https://runkit.com/binhqd/runkit-npm-str-shorten)
+
 ## License
 Copyright (c) 2018 Binh Quan
 
