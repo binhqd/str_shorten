@@ -1,5 +1,6 @@
 # str_shorten
 [![Build Status](https://travis-ci.org/binhqd/str_shorten.svg?branch=master)](https://travis-ci.org/binhqd/str_shorten)
+[![Downloads](http://img.shields.io/npm/dm/str_shorten.svg)](https://www.npmjs.com/package/str_shorten)
 
 Shorten string by character length with word boundary supported
 
