@@ -1,16 +1,25 @@
 # str_shorten
 [![Build Status](https://travis-ci.org/binhqd/str_shorten.svg?branch=master)](https://travis-ci.org/binhqd/str_shorten)
+[![Downloads](http://img.shields.io/npm/dm/str_shorten.svg)](https://www.npmjs.com/package/str_shorten)
 
 Shorten string by character length with word boundary supported
+## NPM
+Install the module with:
+```
+npm install --save str_shorten
+```
 
 ## Usage
 
 ```javascript
+var strShorten = require("str_shorten")
 var str = "We will win if we want";
-var shortenStr = str_shorten(str, 11);
+var shortenStr = strShorten(str, 11);
 ```
 
 The return value will be "We will win"
+
+[See Demo](https://runkit.com/binhqd/runkit-npm-str-shorten)
 
 ## License
 Copyright (c) 2018 Binh Quan
