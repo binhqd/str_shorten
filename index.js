@@ -1,7 +1,12 @@
 module.exports = function(str, maxChars, options) {
   const _optionsDefault = {
     wordBoundary: true,
-    chars: [' ', '-']
+    chars: [' ', '-'],
+    endSymbols: '...'
+  };
+
+  const appendEndSymbols = (strlen, maxChars, endSymbols) => {
+    return strlen > maxChars ? endSymbols : '';
   };
 
   options = Object.assign(_optionsDefault, options);
@@ -11,16 +16,15 @@ module.exports = function(str, maxChars, options) {
   }
 
   if (!options.wordBoundary) {
-    return str.substring(0, maxChars);
+    return str.substring(0, maxChars) + appendEndSymbols(str.length, maxChars, options.endSymbols);
   }
 
   const words = str.split(options.charRegx);
 
   let retStr = '';
   for (let i = 0; i < words.length; i++) {
-    // console.log(`'${retStr} ${words[i]}'`, ':', `${retStr} ${words[i]}`.length);
     if (`${retStr} ${words[i]}`.length > maxChars) {
-      return str.substring(0, retStr.length);
+      return str.substring(0, retStr.length) + appendEndSymbols(str.length, retStr.length, options.endSymbols);
     } else {
       if (i === 0) {
         retStr = words[0];
