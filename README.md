@@ -29,7 +29,7 @@ var str = "We will win if we want";
 var shortenStr = strShorten(str, 11);
 ```
 
-The return value will be "We will win"
+The return value will be "We will win..."
 
 [See Demo](https://runkit.com/binhqd/runkit-npm-str-shorten)
 
