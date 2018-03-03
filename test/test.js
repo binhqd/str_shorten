@@ -7,12 +7,12 @@ describe('String', function() {
 
     it('should return \'We will win\' if max chars is 11', function() {
       var out = str_shorten(str, 11);
-      assert.equal(out, 'We will win');
+      assert.equal(out, 'We will win...');
     });
 
     it('still return \'We will win\' if max chars is 13', function() {
       var out = str_shorten(str, 13);
-      assert.equal(out, 'We will win');
+      assert.equal(out, 'We will win...');
     });
 
     it('should return \'We will win if we want\' if max chars is 130', function() {
