@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.org/binhqd/str_shorten.svg?branch=master)](https://travis-ci.org/binhqd/str_shorten)
 [![npm version](https://img.shields.io/npm/v/str_shorten.svg?style=flat-square)](https://www.npmjs.com/package/str_shorten)
 [![Downloads](http://img.shields.io/npm/dm/str_shorten.svg)](https://www.npmjs.com/package/str_shorten)
+[![Coverage Status](https://coveralls.io/repos/binhqd/str_shorten/badge.svg?branch=master)](https://coveralls.io/r/binhqd/str_shorten?branch=master)
 
 Shorten string by character length with word boundary supported
 ## NPM
