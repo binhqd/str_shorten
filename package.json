@@ -3,7 +3,7 @@
   "name": "str_shorten",
   "main": "index.js",
   "description": "Shorten string by character length with word boundary supported",
-  "version": "2.0.0",
+  "version": "1.0.1",
   "keywords": [
     "str_shorten",
     "truncate",
