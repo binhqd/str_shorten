@@ -24,13 +24,20 @@ str_shorten(string, maxChars, options)
 | endSymbols | '...' | false     | string  | Symbols indicate there is more text. |
 
 ## Example
+### Basic
 ```javascript
 var strShorten = require("str_shorten")
 var str = "We will win if we want";
 var shortenStr = strShorten(str, 11);
 ```
-
 The return value will be "We will win..."
+### Customize end symbols
+```javascript
+var strShorten = require("str_shorten")
+var str = "We will win if we want";
+var shortenStr = strShorten(str, 11, {endSymbols: ' -->'});
+```
+The return value will be "We will win -->"
 
 [See Demo](https://runkit.com/binhqd/runkit-npm-str-shorten)
 
