@@ -19,5 +19,10 @@ describe('String', function() {
       var out = str_shorten(str, 130);
       assert.equal(out, 'We will win if we-want');
     });
+
+    it('should return \'We will win\' if max chars is 11 and empty endSymbols', function() {
+      var out = str_shorten(str, 11, {endSymbols: ''});
+      assert.equal(out, 'We will win');
+    });
   });
 });
