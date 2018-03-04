@@ -5,12 +5,12 @@ var str_shorten = require('../index.js');
 describe('String', function() {
   describe('#str_shorten()', function() {
 
-    it('should return \'We will win\' if max chars is 11', function() {
+    it('should return \'We will win...\' if max chars is 11', function() {
       var out = str_shorten(str, 11);
       assert.equal(out, 'We will win...');
     });
 
-    it('still return \'We will win\' if max chars is 13', function() {
+    it('still return \'We will win...\' if max chars is 13', function() {
       var out = str_shorten(str, 13);
       assert.equal(out, 'We will win...');
     });
