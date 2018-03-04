@@ -46,7 +46,7 @@ var shortenStr = strShorten(str, 11, {endSymbols: ''});
 ```
 The return value will be "We will win"
 
-[See Demo](https://runkit.com/binhqd/runkit-npm-str-shorten)
+[See Demo](https://runkit.com/binhqd/runkit-str-shorten)
 
 ## License
 Copyright (c) 2018 Binh Quan
