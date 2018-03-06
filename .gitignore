@@ -3,3 +3,7 @@ yarn.lock
 .coveralls.yml
 coverage/
 yarn-error.log
+docs/build/
+dist-es6/
+dist-modules/
+npm-debug.log
