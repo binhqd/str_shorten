@@ -1,6 +1,6 @@
 var assert = require('assert');
 var str = 'We will win if we-want';
-var str_shorten = require('../index.js');
+var str_shorten = require('../dist-modules');
 
 describe('String', function() {
   describe('#str_shorten()', function() {

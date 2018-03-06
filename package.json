@@ -1,7 +1,9 @@
 {
   "author": "Binh Quan <binhqd@gmail.com>",
   "name": "str_shorten",
-  "main": "index.js",
+  "main": "dist-modules",
+  "module": "dist-es6",
+  "jsnext:main": "dist-es6",
   "description": "Shorten string by character length with word boundary supported",
   "version": "1.0.5",
   "keywords": [
@@ -16,13 +18,49 @@
   },
   "scripts": {
     "test": "istanbul cover node_modules/.bin/_mocha -- -- -u exports -R spec ./test/test.js",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
+    "dist:es6": "del-cli ./dist-es6 && cross-env BABEL_ENV=es6 babel ./src --out-dir ./dist-es6",
+    "dist:modules": "del-cli ./dist-modules && cross-env BABEL_ENV=modules babel ./src --out-dir ./dist-modules",
+    "prepublishOnly": "npm run dist:es6 && npm run dist:modules"
   },
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "coveralls": "^3.0.0",
     "istanbul": "^0.4.5",
-    "mocha": "^5.0.1"
-  }
+    "mocha": "^5.0.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-jest": "^22.4.1",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-preset-es2015": "^6.24.1",
+    "catalog": "^3.4.0",
+    "chai": "^4.1.2",
+    "cross-env": "^5.1.3",
+    "del-cli": "^1.1.0",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "gh-pages": "^1.1.0",
+    "git-prepush-hook": "^1.0.2",
+    "rimraf": "^2.6.2",
+    "sync-exec": "^0.6.2"
+  },
+
+  "jest": {
+    "collectCoverage": true,
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "packages"
+    ]
+  },
+  "pre-push": [
+    "test"
+  ]
 }
