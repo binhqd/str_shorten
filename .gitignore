@@ -4,6 +4,4 @@ yarn.lock
 coverage/
 yarn-error.log
 docs/build/
-dist-es6/
-dist-modules/
 npm-debug.log
