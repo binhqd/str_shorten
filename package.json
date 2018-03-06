@@ -17,6 +17,7 @@
     "url": "git@github.com:binhqd/str_shorten.git"
   },
   "scripts": {
+    "start": "catalog start docs",
     "test": "istanbul cover node_modules/.bin/_mocha -- -- -u exports -R spec ./test/test.js",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
     "dist:es6": "del-cli ./dist-es6 && cross-env BABEL_ENV=es6 babel ./src --out-dir ./dist-es6",
@@ -34,7 +35,9 @@
     "babel-eslint": "^8.2.2",
     "babel-jest": "^22.4.1",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.13",
     "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "catalog": "^3.4.0",
     "chai": "^4.1.2",
     "cross-env": "^5.1.3",
@@ -43,10 +46,15 @@
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
     "gh-pages": "^1.1.0",
     "git-prepush-hook": "^1.0.2",
     "rimraf": "^2.6.2",
-    "sync-exec": "^0.6.2"
+    "sync-exec": "^0.6.2",
+    "react": "^16.2.0",
+    "react-addons-test-utils": "^15.6.2",
+    "react-dom": "^16.2.0",
+    "react-github-corner": "^2.1.0"
   },
 
   "jest": {
