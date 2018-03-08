@@ -26,8 +26,7 @@
     "gh-pages": "catalog build docs",
     "gh-pages:deploy": "gh-pages -d docs/build",
     "preversion": "npm run test",
-    "postpublish": "npm run gh-pages && npm run gh-pages:deploy",
-    "postinstall": "node lib/post_install.js"
+    "postpublish": "npm run gh-pages && npm run gh-pages:deploy"
   },
   "license": "MIT",
   "dependencies": {},
