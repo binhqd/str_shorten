@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  webpack: (catalogWebpackConfig, {paths, dev, framework}) => {
+  webpack: (catalogWebpackConfig) => {
     return {
       ...catalogWebpackConfig,
       output: {
@@ -13,4 +13,4 @@ module.exports = {
       }
     };
   }
-}
+};
