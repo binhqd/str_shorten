@@ -23,5 +23,10 @@ describe('String', () => {
       let out = strShorten(str, 11, {endSymbols: ''});
       assert.equal(out, 'We will win');
     });
+
+    it('should return \'We will win i...\' if max chars is 11 and empty endSymbols', () => {
+      let out = strShorten(str, 13, {wordBoundary: false});
+      assert.equal(out, 'We will win i...');
+    });
   });
 });
