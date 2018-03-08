@@ -10,6 +10,8 @@ const documentationImports = {
   strShorten: require('../src')
 };
 
+
+
 const pages = [
   {
     path: '/',
@@ -22,12 +24,12 @@ const pages = [
 ReactDOM.render(
   <div>
     <GithubCorner
-      href="https://github.com/binhqd/str_shorten"
       bannerColor="#fff"
+      direction="right"
+      height={80}
+      href="https://github.com/binhqd/str_shorten"
       octoColor="#000"
       width={80}
-      height={80}
-      direction="right"
     />
     <Catalog
       imports={documentationImports}
