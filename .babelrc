@@ -1,8 +1,15 @@
 {
   "presets": [
     "es2015",
+    "react"
   ],
   "plugins": [
-    "syntax-dynamic-import"
+    "syntax-dynamic-import",
+    [
+      "transform-react-remove-prop-types",
+      {
+        "mode": "wrap"
+      }
+    ]
   ]
 }
