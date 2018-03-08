@@ -1,3 +1,7 @@
+function appendEndSymbols(strlen, maxChars, endSymbols) {
+  return strlen > maxChars ? endSymbols : '';
+}
+
 module.exports = (str, maxChars, options) => {
   const _optionsDefault = {
     wordBoundary: true,
@@ -9,10 +13,6 @@ module.exports = (str, maxChars, options) => {
   let retStr = '';
 
   options = Object.assign(_optionsDefault, options);
-
-  function appendEndSymbols(strlen, maxChars, endSymbols) {
-    return strlen > maxChars ? endSymbols : '';
-  }
 
   if (!maxChars || str.length <= maxChars) {
     return str;
