@@ -1,7 +1,7 @@
 # str_shorten
 [![Build Status](https://travis-ci.org/binhqd/str_shorten.svg?branch=master)](https://travis-ci.org/binhqd/str_shorten)
 [![bitHound Score](https://www.bithound.io/github/binhqd/str_shorten/badges/score.svg)](https://www.bithound.io/github/binhqd/str_shorten)
-[![Coverage Status](https://coveralls.io/repos/binhqd/str_shorten/badge.svg?branch=master)](https://coveralls.io/r/binhqd/str_shorten?branch=master)
+[![Coverage Status](https://coveralls.io/repos/binhqd/str_shorten/badge.svg?branch=master&time=2018.03)](https://coveralls.io/r/binhqd/str_shorten?branch=master)
 [![bitHound Code](https://www.bithound.io/github/binhqd/str_shorten/badges/code.svg)](https://www.bithound.io/github/binhqd/str_shorten)
 [![npm version](https://img.shields.io/npm/v/str_shorten.svg?style=flat-square)](https://www.npmjs.com/package/str_shorten)
 [![Downloads](http://img.shields.io/npm/dm/str_shorten.svg)](https://www.npmjs.com/package/str_shorten)
