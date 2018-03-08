@@ -6,14 +6,17 @@ module.exports = function (str, maxChars, options) {
     chars: [' ', '-'],
     endSymbols: '...'
   };
-
-  var appendEndSymbols = function appendEndSymbols(strlen, maxChars, endSymbols) {
-    return strlen > maxChars ? endSymbols : '';
-  };
+  var charRegx = /\s* \s*|\s*-\s*/;
+  var words = str.split(charRegx);
+  var retStr = '';
 
   options = Object.assign(_optionsDefault, options);
-  options.charRegx = /\s* \s*|\s*-\s*/;
-  if (str.length <= maxChars) {
+
+  function appendEndSymbols(strlen, maxChars, endSymbols) {
+    return strlen > maxChars ? endSymbols : '';
+  }
+
+  if (!maxChars || str.length <= maxChars) {
     return str;
   }
 
@@ -21,18 +24,11 @@ module.exports = function (str, maxChars, options) {
     return str.substring(0, maxChars) + appendEndSymbols(str.length, maxChars, options.endSymbols);
   }
 
-  var words = str.split(options.charRegx);
-
-  var retStr = '';
   for (var i = 0; i < words.length; i++) {
     if ((retStr + ' ' + words[i]).length > maxChars) {
       return str.substring(0, retStr.length) + appendEndSymbols(str.length, retStr.length, options.endSymbols);
     } else {
-      if (i === 0) {
-        retStr = words[0];
-      } else {
-        retStr += ' ' + words[i];
-      }
+      retStr = i === 0 ? words[0] : retStr + (' ' + words[i]);
     }
   }
 };

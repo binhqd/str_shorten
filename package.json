@@ -5,7 +5,7 @@
   "module": "dist-es6",
   "jsnext:main": "dist-es6",
   "description": "Shorten string by character length with word boundary supported",
-  "version": "1.0.5",
+  "version": "1.0.17",
   "keywords": [
     "str_shorten",
     "truncate",
