@@ -5,3 +5,4 @@ coverage/
 yarn-error.log
 docs/build/
 npm-debug.log
+*.DS_Store

@@ -12,9 +12,15 @@ Install the module with:
 npm install --save str_shorten
 ```
 
+## Yarn
+Install the module with:
+```
+yarn add str_shorten
+```
+
 ## Usage
 ```
-str_shorten(string, maxChars, options) 
+str_shorten(string, maxChars, options)
 ```
 
 ### Options
