@@ -22,7 +22,7 @@ const pages = [
 ReactDOM.render(
   <div>
     <GithubCorner
-      href="https://github.com/binhqd/react-description-box"
+      href="https://github.com/binhqd/str_shorten"
       bannerColor="#fff"
       octoColor="#000"
       width={80}
