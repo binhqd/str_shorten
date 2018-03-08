@@ -12,6 +12,7 @@
       "objectLiteralComputedProperties": true,
       "objectLiteralDuplicateProperties": true,
       "objectLiteralShorthandMethods": true,
+      "experimentalObjectRestSpread": true,
       "objectLiteralShorthandProperties": true,
       "octalLiterals": true,
       "regexUFlag": true,
