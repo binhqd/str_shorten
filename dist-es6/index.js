@@ -1,22 +1,19 @@
 'use strict';
 
-module.exports = (str, maxChars, options) => {
-  const _optionsDefault = {
+module.exports = function (str, maxChars, options) {
+  var _optionsDefault = {
     wordBoundary: true,
     chars: [' ', '-'],
     endSymbols: '...'
   };
-  const charRegx = /\s* \s*|\s*-\s*/;
-  const words = str.split(charRegx);
-  let retStr = '';
+
+  var appendEndSymbols = function appendEndSymbols(strlen, maxChars, endSymbols) {
+    return strlen > maxChars ? endSymbols : '';
+  };
 
   options = Object.assign(_optionsDefault, options);
-
-  function appendEndSymbols(strlen, maxChars, endSymbols) {
-    return strlen > maxChars ? endSymbols : '';
-  }
-
-  if (!maxChars || str.length <= maxChars) {
+  options.charRegx = /\s* \s*|\s*-\s*/;
+  if (str.length <= maxChars) {
     return str;
   }
 
@@ -24,11 +21,18 @@ module.exports = (str, maxChars, options) => {
     return str.substring(0, maxChars) + appendEndSymbols(str.length, maxChars, options.endSymbols);
   }
 
-  for (let i = 0; i < words.length; i++) {
-    if (`${retStr} ${words[i]}`.length > maxChars) {
+  var words = str.split(options.charRegx);
+
+  var retStr = '';
+  for (var i = 0; i < words.length; i++) {
+    if ((retStr + ' ' + words[i]).length > maxChars) {
       return str.substring(0, retStr.length) + appendEndSymbols(str.length, retStr.length, options.endSymbols);
     } else {
-      retStr = i === 0 ? words[0] : retStr + ` ${words[i]}`;
+      if (i === 0) {
+        retStr = words[0];
+      } else {
+        retStr += ' ' + words[i];
+      }
     }
   }
 };

@@ -4,7 +4,6 @@ let str_shorten = require('../dist-modules');
 
 describe('String', () => {
   describe('#str_shorten()', () => {
-
     it('should return \'We will win...\' if max chars is 11', () => {
       let out = str_shorten(str, 11);
       assert.equal(out, 'We will win...');
