@@ -1,9 +1,5 @@
 'use strict';
 
-function appendEndSymbols(strlen, maxChars, endSymbols) {
-  return strlen > maxChars ? endSymbols : '';
-}
-
 module.exports = function (str, maxChars, options) {
   var _optionsDefault = {
     wordBoundary: true,
@@ -15,6 +11,10 @@ module.exports = function (str, maxChars, options) {
   var retStr = '';
 
   options = Object.assign(_optionsDefault, options);
+
+  function appendEndSymbols(strlen, maxChars, endSymbols) /* istanbul ignore next */{
+    return strlen > maxChars ? endSymbols : '';
+  }
 
   if (!maxChars || str.length <= maxChars) {
     return str;
